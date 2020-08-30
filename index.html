@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Hang Man</h1>
+    <h2>Discover the hidden word-Enter the letter</h2>
+    <div class="container" id="container">
+      <div class="figAndLettersContainer" id="figAndLettersContainer">
+        <div class="figContainer" id="figContainer">
+          <svg
+            height="300px"
+            width="250px"
+            class="fig_container"
+            id="fig_container"
+          >
+            <!--pole-->
+            <line x1="40px" y1="270px" x2="130px" y2="270px" />
+            <line x1="70px" y1="270px" x2="70px" y2="30px" />
+            <line x1="70px" y1="30px" x2="160px" y2="30px" />
+            <line x1="160px" y1="30px" x2="160px" y2="60px" />
+            <!--head-->
+            <circle class="fig_part" id="head" cx="160px" cy="80px" r="20px" />
+            <!--torso-->
+            <line
+              class="fig_part"
+              id="torso"
+              x1="160px"
+              y1="100px"
+              x2="160px"
+              y2="160px"
+            />
+            <!--arms-->
+            <line
+              class="fig_part"
+              id="leftArm"
+              x1="160px"
+              y1="110px"
+              x2="130px"
+              y2="130px"
+            />
+            <line
+              class="fig_part"
+              id="rightArm"
+              x1="160px"
+              y1="110px"
+              x2="190px"
+              y2="130px"
+            />
+            <!--legs-->
+            <line
+              class="fig_part"
+              id="leftLeg"
+              x1="160px"
+              y1="160px"
+              x2="130px"
+              y2="210px"
+            />
+            <line
+              class="fig_part"
+              id="rightLeg"
+              x1="160px"
+              y1="160px"
+              x2="190px"
+              y2="210px"
+            />
+          </svg>
+        </div>
+        <div class="lettersContainer" id="lettersContainer">
+          <h4>Used/wrong letters</h4>
+          <div class="wrongDiv" id="wrongDiv">
+            <span style="color: yellow;" class="wrong" id="wrong"></span>
+          </div>
+        </div>
+      </div>
+      <div class="wordContainer" id="wordContainer"></div>
+    </div>
+    <div class="errMsgDiv" id="errMsgDiv">
+      <h3 class="errMsg" id="errMsg">letter has already been used</h3>
+    </div>
+    <div class="popUp" id="popUp"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
